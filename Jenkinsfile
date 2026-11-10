@@ -96,7 +96,7 @@ pipeline {
                     echo "Deploying to production. Site ID: $NETLIFY_SITE_ID"
                     node_modules/.bin/netlify status
                     echo "Token length: ${#NETLIFY_AUTH_TOKEN}"
-                    node_modules/.bin/netlify deploy --dir=build --prod 
+                    node_modules/.bin/netlify deploy --dir=build --prod --no-build
                 '''
             }
         }
